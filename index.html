@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#050505">
+  <title>Unit 07</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-phase="intro">
+
+  <main id="app">
+    <div id="flash" aria-hidden="true"></div>
+
+    <section class="device" aria-label="Bomb timer">
+      <div class="hazard" aria-hidden="true"></div>
+
+      <div class="leds" aria-hidden="true">
+        <span class="led"></span><span class="led"></span><span class="led"></span>
+      </div>
+
+      <p class="warning">WARNING: EXPLOSIVE DEVICE ACTIVATED</p>
+
+      <div class="screen">
+        <svg id="digit" class="digit idle" viewBox="0 0 60 100" role="img" aria-label="Countdown digit">
+          <polygon class="seg" data-seg="a" points="14,4 46,4 41,10 19,10"/>
+          <polygon class="seg" data-seg="b" points="50,6 50,46 45,50 45,11"/>
+          <polygon class="seg" data-seg="c" points="50,54 50,94 45,89 45,50"/>
+          <polygon class="seg" data-seg="d" points="14,96 46,96 41,90 19,90"/>
+          <polygon class="seg" data-seg="e" points="10,54 10,94 15,89 15,50"/>
+          <polygon class="seg" data-seg="f" points="10,6 10,46 15,50 15,11"/>
+          <polygon class="seg" data-seg="g" points="14,50 19,45 41,45 46,50 41,55 19,55"/>
+        </svg>
+        <p class="readout" id="readout" aria-live="off">00:05.000</p>
+      </div>
+
+      <div class="controls">
+        <button class="btn" id="activate" type="button">ACTIVATE</button>
+        <button class="link" id="fullscreen" type="button">Fullscreen</button>
+      </div>
+
+      <div class="hazard" aria-hidden="true"></div>
+    </section>
+  </main>
+
+  <section id="scare" aria-hidden="true">
+    <img id="scareImg" alt="">
+    <p class="missing">Image not found.<br>Place your file at assets/images/jumpscare.jpg</p>
+    <button class="replay" id="replay" type="button">PLAY AGAIN</button>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
